@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch By Id</title>
+    <style>
+        .red-color-bg{
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div id="my-name">
+
+    </div>
+    <div id="my-email">
+
+    </div>
+    <div id="my-info">
+
+    </div>
+
+    <div id="demo">
+        <button onclick="turnOn()">Turn On</button>
+        <img id="bulb" src="../../Downloads/pic_bulboff.gif">
+        <button onclick="turnOff()">Turn off</button>
+    </div>
+    <script>
+        /*
+        console.log(document.getElementById("my-name").innerHTML);
+        console.log(document.getElementById("my-name").innerText);
+       */
+       console.log(myinfo);
+       
+
+
+
+       //console.log(document.getElementById("my-name").innerHTML);
+       console.log(document.getElementById("my-name").innerText);
+
+       console.log(myinfo);
+       document.getElementById("demo").style.fontSize = "35px";
+       function turnOn(){
+        document.getElementById("bulb").src = "../../Downloads/pic_bulbon.gif";
+        document.getElementById("my-info").style.display= 'block';
+        var myinfo = "I am Jyoti and teaching Javascript to my dabbu";
+        document.getElementById("my-info").innerHTML = myinfo;
+        document.getElementById("my-name").innerHTML = "<b>Jyoti</b>";
+        document.getElementById("my-email").innerHTML = "jyotipawar2003@gmail.com";
+        document.getElementById("my-info").className = "red-color-bg";
+        alert("Bulb is On");
+       }
+       function turnOff(){
+        document.getElementById("bulb").src = "../../Downloads/pic_bulboff.gif";
+        document.getElementById("my-info").style.display= 'none';
+        alert("Bulb is Off");
+        }
+
+    </script>
+</body>
+
+</html>

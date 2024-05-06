@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    var globalVariable = 5;<br>
+var x =6;<br>
+
+{<br>
+    let y =5;<br>
+    console.log("Inside block let"+y);<br>
+    console.log("Inside x="+x);<br>
+    x= 13;<br>
+    console.log("Inside x="+x);<br>
+}<br>
+y = 10;<br>
+console.log("Y"+y);<br>
+console.log("x"+x);<br>
+
+var arr=[1,2,3];<br>
+console.log("Array length"+arr.length);<br>
+
+var myname = "Jyoti";<br>
+
+console.log("My name is "+myname);<br>
+console.log("Length of my name is = "+myname.length);<br>
+console.log("second character of \"y\" myname is assesed by index 1"+myname[1]);<br>
+    <script src="./js/datatypes.js">
+
+    </script>
+    
+</body>
+</html>
