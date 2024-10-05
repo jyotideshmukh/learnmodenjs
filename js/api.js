@@ -20,13 +20,23 @@ const mybutton = document.getElementById("mybutton");
     
 
 }*/
-
-const apiKey = '79f308d96f851dc56f8f5988dedef638';
+//'79f308d96f851dc56f8f5988dedef638'
+const apiKey = '79f308d96f851dc56f8f5988dedef63';
 const apiUrl = 'https://api.openweathermap.org/data/2.5/weather?lat=8.5204&lon=73.8567&appid='+apiKey
 
 fetch(apiUrl)
 .then(response =>{
    if(!response.ok){
+    if (response.status === 404) {
+        throw new Error('Data not found');
+      }
+      else if(response.status === 401){
+        throw new Error('UnAuthorised');
+      }
+      else if (response.status === 500) {
+        throw new Error('Server error');
+      }
+      else
     throw new Error("Weather Api is not working");
    } 
    return response.json();
