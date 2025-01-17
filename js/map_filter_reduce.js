@@ -15,14 +15,45 @@ consider we have given radious of multiple circles in array and we need to find 
 
 */
 
-const radius = [2,4,7,1,9];
-const output =[];
-function calculateArea(){
-for(let i=0; i<radius.length; i++){
-    output.push(Math.PI * radius[i] * radious[i] )
 
+
+ const calculateArea = function (radius){
+    let output= [];
+    for(let i=0; i<radius.length; i++){
+        output.push(Math.PI * radius[i] * radius[i] )
+
+    }
+    return output;
 }
+
+const calculateCircumference = function (radius){
+    let output= [];
+    for(let i=0; i<radius.length; i++){
+        output.push(2 * Math.PI * radius[i]  )
+
+    }
+    return output;
+}
+const calculateDiameter = function (radius){
+   let output= [];
+    for(let i=0; i<radius.length; i++){
+        output.push( radius[i] * 2 )
+
+    }
+    return output;
 }
 
+/* but above logic is duplicated and this is not correct method to write coding,
+we can solve this using hi order function
+*/
+function area(radius){
+    return Math.PI * radius * radius;
+}
 
+function circumfernce(radius){
+    return 2 *Math.PI * radius ;
+}
 
+function diameter(radius){
+    return 2  * radius ;
+}

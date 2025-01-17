@@ -3,6 +3,43 @@
         API in javascript
     </head>
     <body>
+        <script src="js/map_filter_reduce.js"></script>
+        <script >
+            const radius = [2,4,7,1,9];
+            /*
+             but this  logic is duplicated and this is not correct method to write coding,
+            we can solve this using hi order function
+
+            const outputarea =calculateArea(radius)
+            const outputCircumference =calculateCircumference(radius)
+            console.log(outputarea);
+            console.log(outputCircumference);
+
+            */
+           /* higer order function */  
+         const calculateOutput = function (radius,calculate){
+                let output= [];
+                for(let i=0; i<radius.length; i++){
+                    output.push(calculate(radius[i]) );
+
+                }
+                return output;
+            }
+            console.log(calculateOutput(radius, area));
+            console.log(calculateOutput(radius,circumfernce));
+            console.log(calculateOutput(radius,diameter));
+            const outputmap = radius.map(function calculateArea(r){
+                return Math.PI * r * r;
+            });
+            //you can also write like 
+            const outputmapWithArrowFun= radius.map((r) => r * r * Math.PI);
+            /* how to acheive using map function*/
+            console.log(outputmap)
+            console.log(outputmapWithArrowFun)
+
+
+        </script>
+       
     <!--
          //Error handling
         <script src="js/trycatch.js"></script> -->
