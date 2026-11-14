@@ -49,8 +49,24 @@
                 return false;
             }
         }
+        console.log("Product3 and products 4 are same "+(product3==product4));
         console.log(product3.toString()+ "and "+product4.toString() +" are same"+ isSameProduct(product3, product4));
-        console.log("Good Morning".toLowerCase())
+        console.log("Good Morning".toLowerCase()); //Auto Boxing 
+
+        //shortening
+        const message = 'Hello';
+        const messageObj = {
+            message
+        }
+        console.log(messageObj);
+        const message2Obj = {
+            message,
+            method(){
+                console.log("this is function assigned to method property");
+            }
+        }
+        console.log(message2Obj.method())
+
     </script>
 </body>
 </html>
