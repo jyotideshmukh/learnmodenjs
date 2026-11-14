@@ -54,11 +54,14 @@
         console.log("Good Morning".toLowerCase()); //Auto Boxing 
 
         //shortening
-        const message = 'Hello';
+        let message = 'Hello';
         const messageObj = {
             message
         }
+        
         console.log(messageObj);
+        let { messageDestructring } = messageObj;
+        console.log("Destructuring of objects "+ messageDestructring);
         const message2Obj = {
             message,
             method(){
@@ -66,6 +69,9 @@
             }
         }
         console.log(message2Obj.method())
+
+        let { name, price } = product3;
+        console.log("Destructuring of product3 is, name="+ name + "price "+price);
 
     </script>
 </body>
