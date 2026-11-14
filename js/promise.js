@@ -16,3 +16,4 @@ myPromise.then((user)=>{
 })
 
 document.getElementById('output').innerHTML = 'This is going tonreplace by user data';
+

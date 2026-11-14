@@ -6,15 +6,27 @@ consider we have given radious of multiple circles in array and we need to find 
  circumfernce and diameter of all these circles -- 
 
  How to acheive this -
- using hi order function or map function
+ using higher order function or map function
 
  What is high order function -
- the function which takes another function as parameter is called Hi order functions
+ the function which takes another function as parameter is called Higher order functions
 
- another way to use map function, map function is also a Hi order function
+ another way to use map function, map function is also a Higher order function
 
 */
 
+const arr = [5,3,2,1,6];
+/*
+const oddValues = arr.filter(function odd(num){
+    return num % 2;
+})
+*/
+const oddValues = arr.filter((num) => num % 2)
+console.log("Odd values from arr"+ arr +" are "+  oddValues);
+
+//same code we can write with arrow function as 
+const evenValues = arr.filter((num) => num % 2 ==0)
+console.log("Even values from arr"+ arr +" are "+  evenValues);
 
 
  const calculateArea = function (radius){
